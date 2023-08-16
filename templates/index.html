@@ -21,13 +21,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MY PORTFOLIO WEBSITE</title>
   <!-- Font Awesome -->
-  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <style>
+    /* Define the base font size using rem units */
+    :root {
+      --base-font-size: 16px;
+      /* Adjust this value as needed */
+    }
+
     body {
       height: 100vh;
       margin: 0;
@@ -36,9 +44,12 @@
     }
 
     .header {
-      border: 2px solid gray;
-      border-radius: 2px;
+      border: 0.125rem solid gray;
+      
+      border-radius: 0.125rem;
+      
       width: 50%;
+    
       background: rgba(0, 0, 0, 0.5);
     }
 
@@ -64,8 +75,8 @@
     }
 
     .maintxt h1 {
-      font-size: 40px;
-
+      font-size: 2.5rem;
+      
     }
 
     .slides {
@@ -74,14 +85,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 50px;
+      gap: 3.125rem;
       color: antiquewhite;
     }
 
     .slide1 {
       background-image: url('static/uploads/bg-image.png');
       background-size: cover;
-
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .slide2 {
@@ -101,8 +113,8 @@
     }
 
     .slide6 {
-      background-image: url('static/uploads/aboutus.jpg');
-      background-size: cover;
+      background: rgb(62, 62, 62);
+
     }
 
     .nav-container {
@@ -117,58 +129,92 @@
 
     .column-1 {
       width: 70%;
-      border-left: 2px solid gray;
-      padding: 30px;
+      border-left: 0.125rem solid gray;
+      
+      padding: 1.875rem;
+      
     }
 
     .column-2 p {
       font-family: 'Roboto', sans-serif;
       color: aliceblue;
-      font-size: 18px;
-
+      font-size: 1.125rem;
+      
     }
 
     .column-2 {
       width: 70%;
-      border: 2px solid gray;
-      border-radius: 3px;
-      padding: 30px;
+      border: 0.125rem solid gray;
+      
+      border-radius: 0.1875rem;
+     
+      padding: 1.875rem;
+      
     }
 
     .column-1 p {
       font-family: 'Roboto', sans-serif;
       color: aliceblue;
-      font-size: 18px;
-
+      font-size: 1.125rem;
     }
 
     .column-4 {
       width: 70%;
-
-      padding: 30px;
+      padding: 1.875rem;
+      /* 30px converted to 1.875rem */
     }
 
     .border-clm {
-      border: 2px solid gray;
-      padding: 10px;
-      margin: 20px;
+      border: 0.125rem solid gray;
+      /* 2px converted to 0.125rem */
+      padding: 0.625rem;
+      /* 10px converted to 0.625rem */
+      margin: 1.25rem;
+      /* 20px converted to 1.25rem */
       background: #414040;
-      border-radius: 10px;
+      border-radius: 0.625rem;
+      /* 10px converted to 0.625rem */
     }
 
     #bg-color-projects {
       background: #241702;
     }
 
-    #EDUCATION p {
-      color: white;
-    }
-
+    /* Media query for mobile devices */
     @media only screen and (max-width: 768px) {
-      html {
-        font-size: 6px;
-        background-color: red;
-        /* Add a background color for testing */
+      html{
+        font-size: 55%;
+      }
+      /* Adjust font size for mobile as needed */
+      .column-2 p {
+        font-size: 1rem;
+      }
+
+      /* Center the text in the aboutus section */
+      .aboutus {
+        text-align: center;
+        padding: 0 15px;
+      }
+
+      /* Remove margin from column-1 and adjust padding */
+      .column-1 {
+        width: 100%;
+        margin: 0;
+        padding: 1.25rem 0.625rem;
+        /* Adjust padding as needed */
+        border: none;
+      }
+
+      /* Adjust padding for other columns */
+      .column-2,
+      .column-4 {
+        padding: 1.25rem 0.625rem;
+        /* Adjust padding as needed */
+      }
+
+      /* Remove margin from navbar */
+      .navbar {
+        margin-top: 0;
       }
     }
   </style>

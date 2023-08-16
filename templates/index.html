@@ -45,11 +45,11 @@
 
     .header {
       border: 0.125rem solid gray;
-      
+
       border-radius: 0.125rem;
-      
+
       width: 50%;
-    
+
       background: rgba(0, 0, 0, 0.5);
     }
 
@@ -76,7 +76,7 @@
 
     .maintxt h1 {
       font-size: 2.5rem;
-      
+
     }
 
     .slides {
@@ -130,26 +130,26 @@
     .column-1 {
       width: 70%;
       border-left: 0.125rem solid gray;
-      
+
       padding: 1.875rem;
-      
+
     }
 
     .column-2 p {
       font-family: 'Roboto', sans-serif;
       color: aliceblue;
       font-size: 1.125rem;
-      
+
     }
 
     .column-2 {
       width: 70%;
       border: 0.125rem solid gray;
-      
+
       border-radius: 0.1875rem;
-     
+
       padding: 1.875rem;
-      
+
     }
 
     .column-1 p {
@@ -182,11 +182,42 @@
 
     /* Media query for mobile devices */
     @media only screen and (max-width: 768px) {
-      html{
-        font-size: 55%;
+      html {
+        font-size: 62.5%;
+        /* Adjust the base font size for tablets and larger screens */
       }
-      /* Adjust font size for mobile as needed */
-      .column-2 p {
+
+      .header {
+        width: 80%;
+        /* Adjust the header width for tablets and larger screens */
+      }
+
+      .container-txt {
+        padding-left: 20%;
+        /* Adjust the text container padding for tablets and larger screens */
+      }
+
+      .column-1,
+      .column-2,
+      .column-4 {
+        width: 60%;
+        /* Adjust column widths for tablets and larger screens */
+        padding: 2rem;
+        /* Adjust column padding for tablets and larger screens */
+      }
+    }
+
+    /* Media query for smaller screens */
+    @media only screen and (max-width: 767px) {
+      html {
+        font-size: 55%;
+        /* Adjust the base font size for smaller screens */
+      }
+
+      /* Adjust font size for various elements on smaller screens */
+      .column-1 p,
+      .column-2 p,
+      .aboutus p {
         font-size: 1rem;
       }
 
@@ -196,25 +227,12 @@
         padding: 0 15px;
       }
 
-      /* Remove margin from column-1 and adjust padding */
-      .column-1 {
-        width: 100%;
-        margin: 0;
-        padding: 1.25rem 0.625rem;
-        /* Adjust padding as needed */
-        border: none;
-      }
-
-      /* Adjust padding for other columns */
+      /* Adjust padding for columns */
+      .column-1,
       .column-2,
       .column-4 {
-        padding: 1.25rem 0.625rem;
-        /* Adjust padding as needed */
-      }
-
-      /* Remove margin from navbar */
-      .navbar {
-        margin-top: 0;
+        width: 100%;
+        padding: 1.25rem;
       }
     }
   </style>

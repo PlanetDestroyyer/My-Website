@@ -3,6 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio website of Pranav Nalawade - Python Developer">
   <meta name="keywords" content="Python, Developer, Portfolio, Web Development, Projects">
@@ -11,11 +15,12 @@
   <meta name="og:title" content="Pranav Nalawade - Python Developer">
   <meta name="og:description" content="Portfolio website of Pranav Nalawade - Python Developer">
   <meta name="og:image" content="url_to_your_image.jpg">
-  <meta name="og:url" content="https://www.yourwebsite.com">
+  <meta name="og:url" content="https://my-portfolio-website-wzxj.onrender.com">
   <meta name="og:site_name" content="Pranav Nalawade Portfolio">
   <meta name="twitter:title" content="Pranav Nalawade - Python Developer">
   <meta name="twitter:description" content="Portfolio website of Pranav Nalawade - Python Developer">
   <!-- <meta name="twitter:image" content="url_to_your_image.jpg">
+    
   <meta name="twitter:card" content="summary_large_image"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MY WEBSITE</title>
@@ -29,12 +34,18 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <style>
-    
     body {
       height: 100vh;
       margin: 0;
       display: flex;
       flex-direction: column;
+    }
+
+    .header {
+      border: 2px solid gray;
+      border-radius: 2px;
+      width: 50%;
+      background: rgba(0, 0, 0, 0.5);
     }
 
     .content {
@@ -159,46 +170,26 @@
       color: white;
     }
 
-    @media screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
       html {
-        font-size: 10px;
+        font-size: 6px;
+        background-color: red;
+        /* Add a background color for testing */
       }
-
-      body {
-        font-size: 10px;
-      }
-
-      h1 {
-        font-size: small;
-      }
-
     }
   </style>
 </head>
 
 <body>
-  <div class="center">
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-  </div>
   <div class="contain">
     <div class="slides slide1">
       <div class="content">
         <div class="container">
           <div class="container-txt">
-            <div class="header"
-              style="border: 2px solid gray; border-radius: 2px; width: 50%;background: rgba(0,0,0,0.5);">
-              <h1 class="container">I'M </h1>
-              <h1 class="container">PRANAV </h1>
-              <h6 style="color: black;">"Unleashing Possibilities with Python"</h6>
+            <div class="header">
+              <h1 class="container" id="header">I'M </h1>
+              <h1 class="container" id="header">PRANAV </h1>
+              <h6>"Unleashing Possibilities with Python"</h6>
             </div>
           </div>
         </div>
@@ -342,21 +333,21 @@
       <h2 class="column" style="color: darkgreen;">GET IN TOUCH</h2>
       <div class="column-1">
         <div class="container mt-5">
-            <div class="mb-3">
-              <p><i class="fa fa-map-marker fa-lg my-4" style="color: rgb(16, 16, 16);"></i>  Pune, INDIA</p>
-              <p><i class="fa fa-envelope-o my-3"></i>  wrieddude@gmail.com</p> 
-            </div>
-            <!-- Direct Phone Number -->
-            <div class="mb-3">
-              <p><i class="fa fa-phone fa-lg my-3" style="color: #009900;"></i> Call me:</p>
-              <p>+918459582668</p>
-            </div>
-            <!-- Instant Messaging Apps -->
-            <div class="mb-3">
-              <p><i class="fa fa-comments fa-lg my-3" style="color: #ff9900;"></i> Message me:</p>
-              <a href="https://wa.me/918459582668" target="_blank" class="btn btn-success">WhatsApp</a>
-              <a href="https://t.me/@Mr_WhiteHat01" target="_blank" class="btn btn-info">Telegram</a>
-            </div>
+          <div class="mb-3">
+            <p><i class="fa fa-map-marker fa-lg my-4" style="color: rgb(16, 16, 16);"></i> Pune, INDIA</p>
+            <p><i class="fa fa-envelope-o my-3"></i> wrieddude@gmail.com</p>
+          </div>
+          <!-- Direct Phone Number -->
+          <div class="mb-3">
+            <p><i class="fa fa-phone fa-lg my-3" style="color: #009900;"></i> Call me:</p>
+            <p>+918459582668</p>
+          </div>
+          <!-- Instant Messaging Apps -->
+          <div class="mb-3">
+            <p><i class="fa fa-comments fa-lg my-3" style="color: #ff9900;"></i> Message me:</p>
+            <a href="https://wa.me/918459582668" target="_blank" class="btn btn-success">WhatsApp</a>
+            <a href="https://t.me/@Mr_WhiteHat01" target="_blank" class="btn btn-info">Telegram</a>
+          </div>
         </div>
       </div>
     </div>
@@ -366,19 +357,20 @@
         <!-- Section: Social media -->
         <section class="mb-4">
           <!-- Twitter -->
-          <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="https://twitter.com/PranavNalawade_" role="button"><i
-              class="fab fa-twitter"></i></a>
+          <a class="btn text-white btn-floating m-1" style="background-color: #55acee;"
+            href="https://twitter.com/PranavNalawade_" role="button"><i class="fab fa-twitter"></i></a>
 
           <!-- Instagram -->
-          <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="https://www.instagram.com/pranav_n_c/" role="button"><i
-              class="fab fa-instagram"></i></a>
+          <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;"
+            href="https://www.instagram.com/pranav_n_c/" role="button"><i class="fab fa-instagram"></i></a>
 
           <!-- Linkedin -->
-          <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="https://www.linkedin.com/in/pranav-nalawade-022427238/" role="button"><i
+          <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;"
+            href="https://www.linkedin.com/in/pranav-nalawade-022427238/" role="button"><i
               class="fab fa-linkedin-in"></i></a>
           <!-- Github -->
-          <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="https://github.com/PlanetDestroyyer" role="button"><i
-              class="fab fa-github"></i></a>
+          <a class="btn text-white btn-floating m-1" style="background-color: #333333;"
+            href="https://github.com/PlanetDestroyyer" role="button"><i class="fab fa-github"></i></a>
         </section>
         <!-- Section: Social media -->
       </div>

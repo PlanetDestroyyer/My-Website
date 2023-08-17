@@ -53,6 +53,31 @@
       background: rgba(0, 0, 0, 0.5);
     }
 
+    .header {
+      animation: fade-in 1s ease-in-out;
+    }
+
+    /* Define the fade-in animation */
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Add hover effect to buttons */
+    .btn {
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: #2394fd;
+      color: white;
+    }
+
     .content {
       flex: 1;
       display: flex;
@@ -181,37 +206,57 @@
     }
 
     /* Media query for mobile devices */
+    /* ... (your existing CSS styles) ... */
+
+    /* Media query for mobile devices */
     @media only screen and (max-width: 767px) {
       html {
-        font-size: 62.5%;
-        /* Adjust the base font size for tablets and larger screens */
+        font-size: 55%;
+        /* Adjust the base font size for smaller screens */
       }
 
       .header {
-        width: 80%;
-        /* Adjust the header width for tablets and larger screens */
+        width: 60% !important;
+        /* Adjust the header width for smaller screens */
+      }
+
+      .slides.slide2 .column-1 {
+        padding: 1.25rem !important;
+        margin-left: 0 !important;
+      }
+
+      .slides.slide2 .column-1 {
+        margin-left: 0;
+      }
+
+      .slides {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+        /* Adjust the gap between slides for smaller screens */
       }
 
       .container-txt {
-        padding-left: 20%;
-        /* Adjust the text container padding for tablets and larger screens */
+        padding-left: 0;
+        /* Remove the text container padding for smaller screens */
+      }
+
+      .column-1 {
+        margin-left: 0%;
       }
 
       .column-1,
       .column-2,
       .column-4 {
-        width: 60%;
-        /* Adjust column widths for tablets and larger screens */
-        padding: 2rem;
-        /* Adjust column padding for tablets and larger screens */
+        width: 100%;
+        border: none;
+        /* Remove borders on columns for smaller screens */
+        padding: 1.25rem;
       }
-    }
 
-    /* Media query for smaller screens */
-    @media only screen and (max-width: 767px) {
-      html {
-        font-size: 55%;
-        /* Adjust the base font size for smaller screens */
+      .column-1 h1 {
+        font-size: 2rem;
+        /* Adjust the font size of h1 in column-1 for smaller screens */
       }
 
       /* Adjust font size for various elements on smaller screens */
@@ -225,14 +270,6 @@
       .aboutus {
         text-align: center;
         padding: 0 15px;
-      }
-
-      /* Adjust padding for columns */
-      .column-1,
-      .column-2,
-      .column-4 {
-        width: 100%;
-        padding: 1.25rem;
       }
     }
   </style>
@@ -253,23 +290,23 @@
           </div>
         </div>
       </div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #2d2d0d;">
         <div class="nav-container container">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#ABOUTME">ABOUT ME</a>
+              <a class="nav-link active" aria-current="page" href="#ABOUTME" style="color: #2394fd;">ABOUT ME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#TECHNICAL-SKILLS">TECHNICAL SKILLS</a>
+              <a class="nav-link active" href="#TECHNICAL-SKILLS" style="color: #2394fd;">TECHNICAL SKILLS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#EDUCATION">EDUCATION</a>
+              <a class="nav-link active" href="#EDUCATION" style="color: #2394fd;">EDUCATION</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#PROJECTS">PROJECTS</a>
+              <a class="nav-link active" href="#PROJECTS" style="color: #2394fd;">PROJECTS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#GET-IN-TOUCH">GET IN TOUCH</a>
+              <a class="nav-link active" href="#GET-IN-TOUCH" style="color: #2394fd;">GET IN TOUCH</a>
             </li>
           </ul>
         </div>
@@ -326,24 +363,25 @@
       </div>
     </div>
     <div class="slides slide4" id="EDUCATION">
-      <h2 class="column" style="color: rgb(149, 0, 0);">EDUCATION</h2>
+      <h2 class="column" style="color: #FF6347;">EDUCATION</h2>
       <div class="column-4">
         <div style="border: 2px solid gray; padding: 40px; margin: 20px; background: #232223; border-radius: 10px;">
-          <h3 style="color: rgb(149, 0, 0);">BACHELOR'S DEGREE IN ENGINEERING</h3>
-          <p>Genba Sopanrao Moze College of Engineering</p>
-          <p>Year of Graduation: 2026</p>
-          <p>MAJOR : Artificial Intelligence and Data Science (AI&DS)</p>
-          <p>Thesis or Final Project: Brief description of your thesis or final project</p>
+          <h3 style="color: white;">BACHELOR'S DEGREE IN ENGINEERING</h3>
+          <p style="color: #CCCCCC;">Genba Sopanrao Moze College of Engineering</p>
+          <p style="color: #CCCCCC;">Year of Graduation: 2026</p>
+          <p style="color: #FFCCCC;">MAJOR : Artificial Intelligence and Data Science (AI&DS)</p>
+          <p style="color: #CCCCCC;">Currently Pursing My Second Year Of Engineering</p>
         </div>
         <div style="border: 2px solid gray; padding: 40px;margin: 20px;  background: #232223; border-radius: 10px;">
-          <h3 style="color: rgb(149, 0, 0);">SECONDARY SCHOOL</h3>
-          <p>S. B. Patil College of Science and Commerce</p>
-          <p>Completed Year : 2022</p>
-          <p>MAJOR: SCIENCE</p>
-          <p>Achievements: Any notable achievements or awards</p>
+          <h3 style="color: white;">SECONDARY SCHOOL</h3>
+          <p style="color: #CCCCCC;">S. B. Patil College of Science and Commerce</p>
+          <p style="color: #CCCCCC;">Completed Year : 2022</p>
+          <p style="color: #FFCCCC;">MAJOR: SCIENCE</p>
+          <p style="color: #CCCCCC;">Has Completed my Secondary Studies with 60% in Exams</p>
         </div>
       </div>
     </div>
+
     <div class="slides slide5" id="PROJECTS">
       <h2 class="column" style="color: rgb(224, 126, 8);">PROJECTS</h2>
       <div class="column-4">
@@ -392,27 +430,20 @@
       <h2 class="column">GET IN TOUCH</h2>
       <div class="column-1">
         <div class="container mt-5">
-          <div class="mb-3">
-            <p><i class="fa fa-map-marker fa-lg my-4" style="color: rgb(16, 16, 16);"></i> Pune, INDIA</p>
-            <p><i class="fa fa-envelope-o my-3"></i> wrieddude@gmail.com</p>
-          </div>
-          <!-- Direct Phone Number -->
-          <div class="mb-3">
-            <p><i class="fa fa-phone fa-lg my-3" style="color: #009900;"></i> Call me:</p>
-            <p>+918459582668</p>
-          </div>
-          <!-- Instant Messaging Apps -->
-          <div class="mb-3">
-            <p><i class="fa fa-comments fa-lg my-3" style="color: #ff9900;"></i> Message me:</p>
-            <a href="https://wa.me/918459582668" target="_blank" class="btn btn-success">WhatsApp</a>
-            <a href="https://t.me/@Mr_WhiteHat01" target="_blank" class="btn btn-info">Telegram</a>
-          </div>
+          <h4>Contact Information:</h4>
+          <p><i class="fa fa-map-marker fa-lg my-4" style="color: rgb(16, 16, 16);"></i> Pune, INDIA</p>
+          <p><i class="fa fa-envelope-o my-3"></i> wrieddude@gmail.com</p>
+          <p><i class="fa fa-phone fa-lg my-3" style="color: #009900;"></i> Call me: +918459582668</p>
+          <p><i class="fa fa-comments fa-lg my-3" style="color: #ff9900;"></i> Message me:</p>
+          <a href="https://wa.me/918459582668" target="_blank" class="btn btn-success">WhatsApp</a>
+          <a href="https://t.me/@Mr_WhiteHat01" target="_blank" class="btn btn-info">Telegram</a>
         </div>
       </div>
     </div>
-    <footer class="bg-light text-center text-white">
+
+    <footer class="bg-light text-center text-white" style="background: rgb(51, 51, 51);;">
       <!-- Grid container -->
-      <div class="container p-4 pb-0">
+      <div class="container p-4 pb-0" style="background: rgb(51, 51, 51);;">
         <!-- Section: Social media -->
         <section class="mb-4">
           <!-- Twitter -->
